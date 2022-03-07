@@ -1,0 +1,3 @@
+NAME = PhoneBook
+
+SRCS = *.c
