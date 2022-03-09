@@ -1,5 +1,14 @@
 #include "PhoneBook.hpp"
 
+void	Contact::clear_contact()
+{
+	m_firstName = "";
+	m_lastName = "";
+	m_nickName = "";
+	m_phoneNumber = "";
+	m_darkestSecret = "";
+}
+
 void	Contact::fill_contact()
 {
 	while(m_firstName.empty())
@@ -33,7 +42,7 @@ void	Contact::fill_contact()
 void	Contact::set_index(int i)
 {
 	index = i;
-	std::cout << index << std::endl;
+	//std::cout << index << std::endl;
 }
 
 int	Contact::get_index()

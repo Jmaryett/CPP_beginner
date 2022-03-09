@@ -22,6 +22,7 @@ public:
 	std::string	get_nickName();
 	std::string	get_phoneNumber();
 	std::string	get_darkestSecret();
+	void	clear_contact();
 };
 
 

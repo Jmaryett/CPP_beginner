@@ -3,17 +3,19 @@
 PhoneBook::PhoneBook(void)
 {
 	index = 0;
-	nb_of_contacts = 0;
+	nb_of_contacts = 1;
 }
 
 void	PhoneBook::enter_information()
 {
-	if (index >= 8)
+	std::cout << nb_of_contacts << std::endl;
+	if (index > 7 && nb_of_contacts == 8)
+		std::cout << "Phone book filled!\n";
+	else if (index == 7)
 	{
-		index = 0;
-		contact[index].fill_contact();
-		contact[index].set_index(index + 1);
-		index++;
+		contact[0].clear_contact();
+		contact[0].fill_contact();
+		contact[0].set_index(0 + 1);
 	}
 	else
 	{
@@ -75,13 +77,7 @@ void	PhoneBook::show_contact()
 		std::cout << "Enter an index to display all info\n";
 		std::getline(std::cin, s);
 		i = std::atoi(s.c_str());
-		while (!show_all_info(i))
-		{
-			std::cout << "Enter an index to display all info\n";
-			std::getline(std::cin, s);
-			i = std::atoi(s.c_str());
-			show_all_info(i);
-		}
+		show_all_info(i);
 	}
 }
 
