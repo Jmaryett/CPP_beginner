@@ -1,21 +1,32 @@
 #include "PhoneBook.hpp"
 
+PhoneBook::PhoneBook(void)
+{
+	index = 0;
+}
+
 void	PhoneBook::enter_information(PhoneBook book)
 {
-	int	i = 0;
-
-	while(i < max_contacts - 1)
+	if (index == 8)
 	{
-		book.contact->set_index(i + 1, book.contact[i]);
-		book.contact->fill_contact(book.contact[i]);
-		i++;
+		index = 0;
+		contact->set_index(index + 1);
+		contact->fill_contact();
+		index++;
+	}
+	else
+	{
+		index = 0;
+		contact[index]->set_index(index + 1);
+		contact[index]->fill_contact();
+		index++;
 	}
 }
 
 int	PhoneBook::check_input(std::string input, PhoneBook book)
 {
 	if (input == "ADD")
-		enter_information(book);
+		enter_information();
 	else if (input == "SEARCH")
 		return (1);
 	else if (input == "EXIT")

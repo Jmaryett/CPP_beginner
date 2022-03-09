@@ -13,9 +13,11 @@ class PhoneBook
 {
 private:
 	Contacts contact[max_contacts];
+	int	index;
 public:
-	int	check_input(std::string input, PhoneBook book);
-	void	enter_information(PhoneBook book);
+	PhoneBook(void);
+	int	check_input(std::string input);
+	void	enter_information();
 };
 
 

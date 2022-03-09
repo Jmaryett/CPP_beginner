@@ -14,7 +14,7 @@ private:
 	std::string	m_phoneNumber;
 	std::string	m_darkestSecret;
 public:
-	void	set_index(int i, Contacts contact);
+	void	set_index(int i);
 	void	fill_contact();
 };
 

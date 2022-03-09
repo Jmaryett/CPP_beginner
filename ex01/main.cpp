@@ -9,7 +9,7 @@ int	main(int ac, char **av)
 	{
 		if (input.empty())
 			continue ;
-		if(!book.check_input(input, book)) //&book?????
+		if(!book.check_input(input)) //&book?????
 			return (0);
 	}
 	return (0);
