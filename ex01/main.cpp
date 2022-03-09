@@ -1,10 +1,11 @@
 #include "PhoneBook.hpp"
 
-int	main(int ac, char **av)
+int	main()
 {
 	PhoneBook	book;
 	std::string	input;
 
+	std::cout << "You can enter 3 commands: ADD, SEARCH or EXIT\n";
 	while(std::getline(std::cin, input))
 	{
 		if (input.empty())

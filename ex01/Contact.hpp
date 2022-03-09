@@ -4,7 +4,7 @@
 
 #include "PhoneBook.hpp"
 
-class Contacts
+class Contact
 {
 private:
 	int	index;
@@ -16,6 +16,12 @@ private:
 public:
 	void	set_index(int i);
 	void	fill_contact();
+	int		get_index();
+	std::string	get_firstName();
+	std::string	get_lastName();
+	std::string	get_nickName();
+	std::string	get_phoneNumber();
+	std::string	get_darkestSecret();
 };
 
 
