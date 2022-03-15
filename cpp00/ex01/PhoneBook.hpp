@@ -16,6 +16,7 @@ private:
 	Contact contact[MAX_CONTACTS];
 	int	index;
 	int	nb_of_contacts;
+	int	filled_book;
 public:
 	PhoneBook(void);
 	int	check_input(std::string input);

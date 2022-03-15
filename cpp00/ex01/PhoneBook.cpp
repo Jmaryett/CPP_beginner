@@ -3,20 +3,23 @@
 PhoneBook::PhoneBook(void)
 {
 	index = 0;
-	nb_of_contacts = 1;
+	nb_of_contacts = 0;
+	filled_book = 0;
 }
 
 void	PhoneBook::enter_information()
 {
-	std::cout << nb_of_contacts << std::endl;
-	if (index > 7 && nb_of_contacts == 8)
-		std::cout << "Phone book filled!\n";
-	else if (index == 7)
+	//std::cout << "nb-of-contacts" << nb_of_contacts << std::endl;
+	//std::cout << "index = " << index << std::endl; 
+	if (index == 8 && filled_book == 0)
 	{
 		contact[0].clear_contact();
 		contact[0].fill_contact();
 		contact[0].set_index(0 + 1);
+		filled_book = 1;
 	}
+	else if (index >= 8 && filled_book == 1)
+		std::cout << "Phone book filled!\n";
 	else
 	{
 		contact[index].fill_contact();

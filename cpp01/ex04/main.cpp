@@ -11,6 +11,8 @@ void	Biba::replace()
 		if (!file.eof())
 			buff += "\n";
 	}
+	if (buff.empty())
+		error("Empty file!\n");
 	buff = check_if_replace(buff);
 	file_copy << buff;
 }
