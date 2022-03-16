@@ -10,7 +10,7 @@
 class Fixed
 {
 private:
-	int	m_store;
+	int	m_fixed;
 	static const int	m_bits;
 public:
 	Fixed(/* args */); //default constr
@@ -25,6 +25,6 @@ public:
 	void	setRawBits(int const raw);
 };
 
-
+std::ostream& operator<<(std::ostream &out, const Fixed &object);
 
 #endif
