@@ -7,6 +7,7 @@
 int	main()
 {
 	std::cout << "Testing virtual methods\n";
+	std::cout << std::endl;
 	const Animal*	meta = new Animal("parent");
 	const Animal*	j = new Dog("Biba");
 	const Animal*	i = new Cat("Princess");
@@ -21,8 +22,9 @@ int	main()
 	delete i;
 	delete meta;
 
+	std::cout << std::endl;
 	std::cout << "Testing without virtual methods\n";
-
+	std::cout << std::endl;
 	const WrongAnimal*	james = new WrongAnimal("James");
 	const WrongAnimal*	lu = new WrongCat("Lu");
 
@@ -30,7 +32,6 @@ int	main()
 	std::cout << lu->getType() << " " << std::endl;
 	james->makeSound();
 	lu->makeSound();
-	meta->makeSound();
 
 	delete james;
 	delete lu;

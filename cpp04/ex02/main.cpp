@@ -7,6 +7,7 @@
 
 int	main()
 {
+	const Animal	*anal = new Animal("Anal");
 	const Animal	*cat = new Cat("Catto");
 	std::cout << std::endl;
 	const Animal	*dog = new Dog("Doggo");
