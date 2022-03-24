@@ -1,9 +1,9 @@
 #include "Cure.hpp"
 
-Cure::Cure() : AMateria("No type")
+Cure::Cure() : AMateria("cure")
 {
 	std::cout << "Cure constructor called!\n";
-	_type = "Cure";
+	//_type = "Cure";
 }
 
 Cure::Cure(const Cure &object) : AMateria(object)
@@ -29,7 +29,7 @@ Cure::~Cure()
 
 Cure*	Cure::clone() const
 {
-	Cure	*clone = new Cure(*this);
+	return (new Cure());
 }
 
 void	Cure::use(ICharacter &target)

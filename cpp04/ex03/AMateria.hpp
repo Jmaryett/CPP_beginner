@@ -1,10 +1,10 @@
-#ifndef MATERIA_HPP
-# define MATERIA_HPP
+#ifndef AMATERIA_HPP
+# define AMATERIA_HPP
 
 # include <iostream>
 # include <iomanip>
 # include <string>
-# include "Character.hpp"
+# include "ICharacter.hpp"
 
 class AMateria
 {
@@ -14,7 +14,7 @@ public:
 	AMateria(std::string const &type);
 	AMateria(const AMateria &object);
 	AMateria& operator=(const AMateria &object);
-	~AMateria();
+	virtual ~AMateria();
 
 	std::string const& getType() const;
 	virtual AMateria* clone() const = 0;

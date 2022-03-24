@@ -1,7 +1,7 @@
 NAME	= interface
 FLAGS	= -Wall -Wextra -Werror
 SRC		= main.cpp AMateria.cpp Character.cpp MateriaSource.cpp Ice.cpp Cure.cpp
-INC		= AMateria.hpp Character.hpp ICharacter.hpp IMateriaSource.hpp MateriaSource.hpp Ice.hpp Cure.hpp
+INC		= AMateria.hpp Character.hpp MateriaSource.hpp Ice.hpp Cure.hpp ICharacter.hpp IMateriaSource.hpp
 OBJ		= $(SRC:.cpp=.o)
 
 

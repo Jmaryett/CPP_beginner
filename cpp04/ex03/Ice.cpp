@@ -1,9 +1,9 @@
 #include "Ice.hpp"
 
-Ice::Ice() : AMateria("No type")
+Ice::Ice() : AMateria("ice")
 {
 	std::cout << "Ice constructor called!\n";
-	_type = "ice";
+	//_type = "ice";
 }
 
 Ice::Ice(const Ice &object) : AMateria(object)
@@ -29,7 +29,7 @@ Ice::~Ice()
 
 Ice*	Ice::clone() const
 {
-	Ice	*clone = new Ice(*this);
+	return (new Ice());
 }
 
 void	Ice::use(ICharacter &target)

@@ -1,19 +1,29 @@
 #ifndef CHARACTER_HPP
 # define CHARACTER_HPP
 
-# include <iostream>
-# include "Materia.hpp"
+# include "AMateria.hpp"
+# include "ICharacter.hpp"
+# include "Ice.hpp"
+# include "Cure.hpp"
 
-class ICharacter
+
+class Character : public ICharacter
 {
 private:
-	std::string	_inventory[4];
+	AMateria	*_inventory[4];
+	std::string	_name;
 public:
-	virtual ~ICharacter() {}
-	virtual std::string		const& getName() const = 0;
-	virtual void			equip(AMateria *m) = 0;
-	virtual void			unequip(int idx) = 0;
-	virtual void			use(int idx, ICharacter &target) = 0;
+	Character(std::string name); //set empty inventory here
+	virtual ~Character();
+	Character(const Character &object);
+	Character& operator=(const Character &object);
+
+
+	virtual std::string		const& getName() const;
+	virtual void			equip(AMateria *m);
+	virtual void			unequip(int idx);
+	virtual void			use(int idx, ICharacter &target);
 };
+
 
 #endif
