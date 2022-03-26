@@ -55,3 +55,22 @@ std::string	Biba::check_if_replace(std::string line)
 	}
 	return (line);
 }
+
+void	Biba::replace()
+{
+	std::string	buff;
+	std::string	tmp;
+
+	while (!file.eof()) {
+		getline(file, tmp);
+		buff += tmp;
+		if (!file.eof())
+			buff += "\n";
+	}
+	if (buff.empty())
+		error("Empty file!\n");
+	buff = check_if_replace(buff);
+	file_copy << buff;
+	file_copy.close();
+	file.close();
+}

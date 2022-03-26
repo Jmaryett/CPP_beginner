@@ -10,6 +10,14 @@ MateriaSource::MateriaSource(/* args */)
 MateriaSource::~MateriaSource()
 {
 	std::cout << "MateriaSource destructor called!\n";
+	for (int i = 0; i < 4; i++)
+	{
+		if (copies[i])
+		{	
+			delete copies[i];
+			copies[i] = 0;
+		}
+	}
 }
 
 
