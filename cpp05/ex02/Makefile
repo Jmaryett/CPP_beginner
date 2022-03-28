@@ -1,7 +1,7 @@
-NAME	= bureaucrat
+NAME	= execute
 FLAGS	= -Wall -Wextra -Werror
-SRC		= main.cpp Bureaucrat.cpp Form.cpp
-INC		= Bureaucrat.hpp Form.hpp
+SRC		= main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+INC		= Bureaucrat.hpp Form.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp
 OBJ		= $(SRC:.cpp=.o)
 
 
@@ -11,7 +11,7 @@ OBJ		= $(SRC:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	clang++ -std=c++98 $(FLAGS) -o $(NAME) $(OBJ)
+	clang++ $(FLAGS) -o $(NAME) $(OBJ)
 
 clean:
 	rm -rf $(OBJ)

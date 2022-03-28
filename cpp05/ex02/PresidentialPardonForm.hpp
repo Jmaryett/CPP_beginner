@@ -15,7 +15,7 @@ public:
 
 	virtual void	execute(Bureaucrat const &executor) const;
 
-	void	pardon();
+	void	pardon() const;
 
 	class CannotExecException : public std::exception
 	{

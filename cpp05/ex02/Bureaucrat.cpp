@@ -2,7 +2,7 @@
 
 Bureaucrat::Bureaucrat(std::string name, int nb) : _name(name)
 {
-	std::cout << "Bureaucrat constructor called!\n";
+	//std::cout << "Bureaucrat constructor called!\n";
 	if(nb > 150)
 		throw Bureaucrat::GradeTooLowException();
 	else if (nb < 1)
@@ -12,18 +12,18 @@ Bureaucrat::Bureaucrat(std::string name, int nb) : _name(name)
 
 Bureaucrat::~Bureaucrat()
 {
-	std::cout << "Bureaucrat destructor called!\n";
+	//std::cout << "Bureaucrat destructor called!\n";
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &object) : _name(object.getName())
 {
-	std::cout << "Bureaucrat copy constructor called!\n";
+	//std::cout << "Bureaucrat copy constructor called!\n";
 	*this = object;
 }
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat &object)
 {
-	std::cout << "Bureaucrat assignment operator called!\n";
+	//std::cout << "Bureaucrat assignment operator called!\n";
 	if (this == &object)
 		return (*this);
 	_grade = object._grade;
@@ -105,10 +105,11 @@ void	Bureaucrat::executeForm(Form const &form)
 	try
 	{
 		form.execute(*this);
-		std::cout << 
+		std::cout << "Bureaucrat executed " << form.getForm() << std::endl;
 	}
 	catch(const std::exception& e)
 	{
+		std::cout << "Bureaucrat couldn't execute form.\n";
 		std::cerr << e.what() << '\n';
 	}
 }

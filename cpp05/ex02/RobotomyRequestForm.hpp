@@ -18,7 +18,7 @@ public:
 
 	virtual void	execute(Bureaucrat const &executor) const;
 
-	void	noise();
+	void	noise() const;
 	class CannotExecException : public std::exception
 	{
 	protected:

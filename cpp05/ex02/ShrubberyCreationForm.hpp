@@ -15,7 +15,7 @@ public:
 
 	virtual void	execute(Bureaucrat const &executor) const;
 
-	void	create();
+	void	create() const;
 
 	class CannotExecException : public std::exception
 	{

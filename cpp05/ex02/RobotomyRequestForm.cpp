@@ -35,9 +35,10 @@ void	RobotomyRequestForm::execute(Bureaucrat const &executor) const
 {
 	if (!RobotomyRequestForm::ifSigned() || executor.getGrade() != RobotomyRequestForm::getGrade(1))
 		throw RobotomyRequestForm::CannotExecException();
+	RobotomyRequestForm::noise();
 }
 
-void	RobotomyRequestForm::noise()
+void	RobotomyRequestForm::noise() const
 {
 	srand((unsigned int)time(NULL));
 	int robotomiseResult = std::rand() % 2;

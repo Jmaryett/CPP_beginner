@@ -1,6 +1,6 @@
 #include "Form.hpp"
 
-Form::Form( std::string name, int sign, int exec) :  _form(name), _grade_to_sign(sign), _grade_to_exec(exec)
+Form::Form(std::string name, int sign, int exec) :  _form(name), _grade_to_sign(sign), _grade_to_exec(exec)
 {
 	if (_grade_to_exec > 150 || _grade_to_sign > 150)
 		throw Form::GradeTooLowException();
@@ -27,7 +27,7 @@ Form& Form::operator=(const Form &object)
 
 std::string	Form::getForm() const
 {
-	return (_form);
+	return (this->_form);
 }
 
 int	Form::getGrade(int flag) const
@@ -81,7 +81,7 @@ const char*	Form::GradeTooHighException::what() const throw()
 std::ostream& operator<<(std::ostream &out, const Form &object)
 {
 	out << object.getForm() << ", Form grade to exec " << object.getGrade(1) << ", Form grade to sign "
-	<< object.getGrade(0);
+	<< object.getGrade(0) << " Signed: " << object.ifSigned();
 	return (out);
 }
 

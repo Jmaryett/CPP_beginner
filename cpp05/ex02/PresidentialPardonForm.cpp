@@ -27,7 +27,6 @@ const char*	PresidentialPardonForm::CannotExecException::what() const throw()
 
 PresidentialPardonForm::CannotExecException::CannotExecException()
 {
-	//std::cout << "GradeHigh constructor called!\n";
 	_error = "(PresidentialPardonForm)Cannot execute!\n";
 }
 
@@ -35,9 +34,10 @@ void	PresidentialPardonForm::execute(Bureaucrat const &executor) const
 {
 	if (!PresidentialPardonForm::ifSigned() || executor.getGrade() != PresidentialPardonForm::getGrade(1))
 		throw PresidentialPardonForm::CannotExecException();
+	PresidentialPardonForm::pardon();
 }
 
-void	PresidentialPardonForm::pardon()
+void	PresidentialPardonForm::pardon() const
 {
 	std::cout << _target << " has been pardoned by Zaphod Beeblebrox.\n";
 }

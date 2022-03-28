@@ -28,24 +28,26 @@ const char*	ShrubberyCreationForm::CannotExecException::what() const throw()
 ShrubberyCreationForm::CannotExecException::CannotExecException()
 {
 	//std::cout << "GradeHigh constructor called!\n";
-	_error = "(ShrubberyCreationForm)Cannot execute or create file!\n";
+	_error = "(ShrubberyCreationForm)Cannot execute or create file because not signed or grade is wrong!\n";
 }
 
 void	ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 {
 	if (!ShrubberyCreationForm::ifSigned() || executor.getGrade() != ShrubberyCreationForm::getGrade(1))
 		throw ShrubberyCreationForm::CannotExecException();
+	ShrubberyCreationForm::create();
 }
 
-void	ShrubberyCreationForm::create()
+void	ShrubberyCreationForm::create() const
 {
 	std::ofstream	file;
 	std::string	file_name = _target + "_shrubbery";
 
+	//std::cout << file_name << "\n";
 	file.open(file_name.c_str(), std::ofstream::trunc);
 	if (!file.is_open())
-		throw ShrubberyCreationForm::CannotExecException();
-	
+		throw ShrubberyCreationForm::CannotExecException(); //{std::cerr << "Can't open file!\n"; return ;}
+
 	file << "     /\\     " << std::endl;
 	file << "    /  \\    " << std::endl;
 	file << "   /    \\   " << std::endl;
