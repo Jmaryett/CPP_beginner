@@ -42,17 +42,14 @@ int		main(void)
 	{
 		cat.decreseGrade(26);
 		cat.signForm(&atom);
-		//std::cout << cat << std::endl;
 		cat.increaseGrade(27);
 		cat.executeForm(atom);
-		//cat.executeForm(atom);
 	}
 	catch(const std::exception& e)
 	{
 		std::cerr << e.what() << '\n';
 	}
 	
-
 	std::cout << std::endl;
 	
 	std::cout << "TEST PresidentialPardonForm" << std::endl;
