@@ -1,8 +1,8 @@
-#include "Karen.hpp"
+#include "Harl.hpp"
 
 int	main(int ac, char **av)
 {
-	Karen	karen;
+	Harl	harl;
 
 	if (ac != 2)
 	{
@@ -10,6 +10,6 @@ int	main(int ac, char **av)
 		return (0);
 	}
 	else
-		karen.complain(static_cast<std::string>(av[1]));
+		harl.complain(static_cast<std::string>(av[1]));
 	return (0);
 }

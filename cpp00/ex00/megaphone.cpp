@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cctype>
 
 int	main(int ac, char **av)
 {
@@ -6,22 +7,18 @@ int	main(int ac, char **av)
 	int	j;
 
 	if (ac == 1)
-		return (0);
-	while(av[++i])
+	{ std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE\n"; return (0); };
+	while (av[++i])
 	{
-		j = 0;
-		while(av[i][j])
+		j = -1;
+		while (av[i][++j])
 		{
-			if (av[i][j] >= 'a' && av[i][j] <= 'z')
-			{
-				av[i][j] -= 32;
-				std::cout << av[i][j];
-			}
-			else
-				std::cout << av[i][j];
-			j++;
+			av[i][j] = toupper(av[i][j]);
+			std::cout << av[i][j];
 		}
-		std::cout << std::endl;
+		if (av[i + 1])
+			std::cout << " ";
 	}
+	std::cout << std::endl;
 	return (0);
 }

@@ -50,7 +50,7 @@ std::string	Biba::check_if_replace(std::string line)
 		{
 			line = line.erase(pos, toSkip);
 			line = line.insert(pos, s2);
-			pos = line.find(s1, pos + s2.length() + 1);
+			pos = line.find(s1, pos + s2.length()); //+ 1);
 		}
 	}
 	return (line);

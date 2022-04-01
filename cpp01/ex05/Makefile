@@ -1,7 +1,7 @@
-NAME	= karen
+NAME	= harl
 FLAGS	= -Wall -Wextra -Werror
-SRC		= main.cpp Karen.cpp
-INC		= Karen.hpp
+SRC		= main.cpp Harl.cpp
+INC		= Harl.hpp
 OBJ		= $(SRC:.cpp=.o)
 
 

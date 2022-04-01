@@ -7,5 +7,5 @@ int	main()
 	eric = newZombie("Eric");
 	eric->announce();
 	randomChump("Stan");
-	delete eric;//we call a destructor for zombie
+	delete eric; //we call a destructor for zombie
 }

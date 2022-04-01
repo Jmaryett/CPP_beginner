@@ -12,11 +12,11 @@
 class Biba
 {
 private:
-	std::string	line;
+	std::string		line;
 	std::ifstream	file;
 	std::ofstream	file_copy;
-	std::string	s1;
-	std::string	s2;
+	std::string		s1;
+	std::string		s2;
 public:
 	Biba();
 	~Biba();
