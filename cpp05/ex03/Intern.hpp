@@ -44,7 +44,7 @@ public:
 		std::string	_error;
 	public:
 		InternException(/* args */);
-		~InternException() throw();
+		virtual ~InternException() throw();
 		virtual const char*	what() const throw();
 	};
 };

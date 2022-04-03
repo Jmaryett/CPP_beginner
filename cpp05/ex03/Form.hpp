@@ -46,7 +46,7 @@ public:
 		std::string	_error;
 	public:
 		GradeTooLowException();
-		~GradeTooLowException() throw();
+		virtual ~GradeTooLowException() throw();
 		void setError();
 		virtual const char*	what() const throw();
 	};

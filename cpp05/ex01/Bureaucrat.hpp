@@ -33,7 +33,7 @@ public:
 		std::string	_error;
 	public:
 		GradeTooHighException();
-		~GradeTooHighException() throw();
+		virtual ~GradeTooHighException() throw();
 		virtual const char*	what() const throw();
 	};
 
@@ -43,7 +43,7 @@ public:
 		std::string	_error;
 	public:
 		GradeTooLowException();
-		~GradeTooLowException() throw();
+		virtual ~GradeTooLowException() throw();
 		void setError();
 		virtual const char*	what() const throw();
 	};
