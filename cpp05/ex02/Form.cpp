@@ -93,3 +93,7 @@ void	Form::beSigned(Bureaucrat *b)
 		throw Form::GradeTooLowException();
 	_signed = true;
 }
+
+Form::GradeTooLowException::~GradeTooLowException() throw() {}
+
+Form::GradeTooHighException::~GradeTooHighException() throw() {}

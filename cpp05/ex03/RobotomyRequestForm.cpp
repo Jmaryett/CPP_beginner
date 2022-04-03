@@ -48,3 +48,5 @@ void	RobotomyRequestForm::noise() const
 	else
 		throw RobotomyRequestForm::CannotExecException();	
 }
+
+RobotomyRequestForm::CannotExecException::~CannotExecException() throw() {}

@@ -113,3 +113,7 @@ void	Bureaucrat::executeForm(Form const &form)
 		std::cerr << e.what() << '\n';
 	}
 }
+
+Bureaucrat::GradeTooLowException::~GradeTooLowException() throw() {}
+
+Bureaucrat::GradeTooHighException::~GradeTooHighException() throw() {}

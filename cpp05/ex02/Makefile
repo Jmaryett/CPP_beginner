@@ -17,7 +17,7 @@ clean:
 	rm -rf $(OBJ)
 
 fclean: clean
-	rm -rf $(NAME)
+	rm -rf $(NAME) picul_shrubbery
 
 re: fclean all
 

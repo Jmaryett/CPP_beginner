@@ -60,3 +60,5 @@ void	ShrubberyCreationForm::create() const
 
 	file.close();
 }
+
+ShrubberyCreationForm::CannotExecException::~CannotExecException() throw() {}

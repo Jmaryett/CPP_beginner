@@ -29,6 +29,28 @@ int		main(void)
 		std::cerr << e.what() << '\n';
 	}
 
+	Form	*forma3;
+	try
+	{
+		forma3 = intern.makeForm("robotomy request", "Robo");
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+
+	Form	*forma4;
+	try
+	{
+		forma4 = intern.makeForm("presidential pardon", "President");
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+
 	delete forma;
 	delete forma2;
+	delete forma3;
+	delete forma4;
 }

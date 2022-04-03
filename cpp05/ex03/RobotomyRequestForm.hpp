@@ -25,6 +25,7 @@ public:
 		std::string	_error;
 	public:
 		CannotExecException();
+		~CannotExecException() throw();
 		virtual const char*	what() const throw();
 	};
 };

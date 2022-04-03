@@ -103,6 +103,12 @@ int	main()
 	Dog	doggo("Dudu");
 	{
 		Dog	doggoCopy = doggo;
+		const std::string &ref7 = doggoCopy.getBrain().getIdeas(0);
+		const std::string &ref8 = doggoCopy.getBrain().getIdeas(1);
+		std::cout << "DoggoCopy first idea: " << ref7 << std::endl;
+		std::cout << "DoggoCopy first idea address: " << &ref7 << std::endl;
+		std::cout << "DoggoCopy second idea address: " << &ref8 << std::endl;
+		std::cout << std::endl;
 	}
 	const std::string &ref7 = doggo.getBrain().getIdeas(0);
 	const std::string &ref8 = doggo.getBrain().getIdeas(1);

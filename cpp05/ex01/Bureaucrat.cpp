@@ -99,3 +99,7 @@ void	Bureaucrat::signForm(Form *f)
 		std::cout << _name << " couldn't sign  " << f->getForm() << " because of " << e.what() << std::endl;
 	}
 }
+
+Bureaucrat::GradeTooLowException::~GradeTooLowException() throw() {}
+
+Bureaucrat::GradeTooHighException::~GradeTooHighException() throw() {}

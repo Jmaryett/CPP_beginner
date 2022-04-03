@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Fri Apr  1 18:36:59 2022
+# Make data base, printed on Sun Apr  3 17:40:37 2022
 
 # Variables
 
@@ -39,11 +39,11 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n003vkv400ywps/T/vscode-ipc-499c89ea-ed7a-4446-9a85-c559c66c7ecd.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n003vkv400ywps/T/vscode-ipc-6871402e-c916-4849-a12f-c67784cd3cb0.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.amfAsUIlCU/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.CZZ5bHfDIr/Render
 # environment
 PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/usr/local/munki:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands
 # environment
@@ -53,7 +53,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.IGWa7xw7TY/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.oDBbnOyO0y/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -111,7 +111,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.microsoft.VSCode.1280
+XPC_SERVICE_NAME = com.microsoft.VSCode.2516
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -135,9 +135,8 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 30671
+VSCODE_PID = 91375
 # variable set hash-table stats:
- 
 # Load=61/1024=6%, Rehash=0, Collisions=1/82=1%
 
 # Pattern-specific Variable Values
@@ -220,6 +219,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Fri Apr  1 18:36:59 2022
+# Finished Make data base on Sun Apr  3 17:40:37 2022
 
  

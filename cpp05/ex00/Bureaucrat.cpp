@@ -3,7 +3,7 @@
 Bureaucrat::Bureaucrat(int nb) : _name("Constantine")
 {
 	std::cout << "Bureaucrat constructor called!\n";
-	if(nb > 150)
+	if (nb > 150)
 		throw Bureaucrat::GradeTooLowException();
 	else if (nb < 1)
 		throw Bureaucrat::GradeTooHighException();
@@ -86,3 +86,7 @@ const char*	Bureaucrat::GradeTooHighException::what() const throw()
 {
 	return (_error.c_str());
 }
+
+Bureaucrat::GradeTooLowException::~GradeTooLowException() throw() {}
+
+Bureaucrat::GradeTooHighException::~GradeTooHighException() throw() {}

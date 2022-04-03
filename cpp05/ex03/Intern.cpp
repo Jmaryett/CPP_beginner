@@ -55,7 +55,6 @@ Form*	Intern::makeForm(std::string form_name, std::string target)
 	std::string	form_names[AMOUNT_BASE_FORMS] = {ROBOTOMY_REQUEST, SHRUBBERY_CREATION, PRESIDENTIAL_PARDON};
 	Form*	(Intern::*func_ptr[AMOUNT_BASE_FORMS])(std::string &target) = {&Intern::robotomy, &Intern::shrubbery,
 		&Intern::presidential};
-
 	try
 	{
 		checkFormName(form_name);
@@ -87,3 +86,5 @@ Form*	Intern::makeForm(std::string form_name, std::string target)
 	}
 	return (ret);
 }
+
+Intern::InternException::~InternException() throw() {}

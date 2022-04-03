@@ -41,3 +41,5 @@ void	PresidentialPardonForm::pardon() const
 {
 	std::cout << _target << " has been pardoned by Zaphod Beeblebrox.\n";
 }
+
+PresidentialPardonForm::CannotExecException::~CannotExecException() throw() {}
