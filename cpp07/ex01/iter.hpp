@@ -29,5 +29,4 @@ std::ostream& operator<<(std::ostream &out, Check const &object)
 	return (out);
 }
 
-
 #endif
