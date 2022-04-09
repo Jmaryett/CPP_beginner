@@ -6,12 +6,12 @@ OBJ		= $(SRC:.cpp=.o)
 
 
 %.o: %.cpp $(INC)
-	clang++ $(FLAGS) -o $@ -c $<
+	c++ $(FLAGS) -o $@ -c $<
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	clang++ $(FLAGS) -o $(NAME) $(OBJ)
+	c++ $(FLAGS) -o $(NAME) $(OBJ)
 
 clean:
 	rm -rf $(OBJ)

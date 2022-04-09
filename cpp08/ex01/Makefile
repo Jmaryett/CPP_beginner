@@ -1,9 +1,8 @@
-NAME	= bureaucrat
+NAME	= span
 FLAGS	= -Wall -Wextra -Werror
-SRC		= main.cpp Bureaucrat.cpp
-INC		= Bureaucrat.hpp
+SRC		= main.cpp Span.cpp
+INC		= Span.hpp
 OBJ		= $(SRC:.cpp=.o)
-
 
 %.o: %.cpp $(INC)
 	c++ $(FLAGS) -o $@ -c $<
@@ -11,7 +10,7 @@ OBJ		= $(SRC:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	c++ -std=c++98 $(FLAGS) -o $(NAME) $(OBJ)
+	c++ $(FLAGS) -o $(NAME) $(OBJ)
 
 clean:
 	rm -rf $(OBJ)

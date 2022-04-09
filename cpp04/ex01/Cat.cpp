@@ -20,7 +20,6 @@ Cat& Cat::operator=(const Cat &object)
 
 	if (this == &object)
 		return(*this);
-
 	if (cat_brain)
 		delete this->cat_brain;
 	if (object.cat_brain)

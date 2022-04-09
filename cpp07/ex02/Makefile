@@ -1,16 +1,16 @@
 NAME	= jopa
 FLAGS	= -Wall -Wextra -Werror
 SRC		= main.cpp
-INC		= Array.hpp
+INC		= Array.hpp TestClass.hpp
 OBJ		= $(SRC:.cpp=.o)
 
 %.o: %.cpp $(INC)
-	clang++ $(FLAGS) -o $@ -c $<
+	c++ $(FLAGS) -o $@ -c $<
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	clang++ -std=c++98 $(FLAGS) -o $(NAME) $(OBJ)
+	c++ -std=c++98 $(FLAGS) -o $(NAME) $(OBJ)
 
 clean:
 	rm -rf $(OBJ)

@@ -1,7 +1,7 @@
-NAME	= bureaucrat
+NAME	= easyFind
 FLAGS	= -Wall -Wextra -Werror
-SRC		= main.cpp Bureaucrat.cpp
-INC		= Bureaucrat.hpp
+SRC		= main.cpp
+INC		= easyfind.hpp
 OBJ		= $(SRC:.cpp=.o)
 
 
@@ -11,7 +11,7 @@ OBJ		= $(SRC:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	c++ -std=c++98 $(FLAGS) -o $(NAME) $(OBJ)
+	c++ $(FLAGS) -o $(NAME) $(OBJ)
 
 clean:
 	rm -rf $(OBJ)

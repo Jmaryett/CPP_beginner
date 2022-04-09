@@ -10,4 +10,6 @@ int main()
 	Check	tab2[5];
 
 	iter(tab, 5, print);
+	std::string s = "I hate you, guys";
+	iter(s.c_str(), 17, print);
 }

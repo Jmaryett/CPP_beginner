@@ -12,36 +12,46 @@ class Array
 {
 private:
 	T	*_element;
+	unsigned int	_size;
 public:
-	Array(/* args */);
+	Array();
 	~Array();
 	Array(unsigned int n);
 	Array(const Array &object);
 	Array& operator=(const Array &object);
 	T& operator[](const int index);
-	int size() const;
+	unsigned int size() const;
+
+	class	MyException : public std::exception
+	{
+	private:
+		std::string	_error;
+	public:
+		MyException() 
+		{
+			 _error = "Index is out of range!\n";
+		}
+		virtual ~MyException() throw() {}
+		virtual const char*	what() const throw()
+		{ 
+			return (_error.c_str()); 
+		}
+	};
 };
 
 template <typename T>
 Array<T>::Array()
 {
 	_element = NULL;
-}
-
-template <typename T>
-Array<T>::~Array()
-{
-	if (_element)
-		delete [] _element;
+	_size = 0;
 }
 
 template <typename T>
 Array<T>::Array(unsigned int n)
 {
-	if (_element)
-		delete [] _element;
-	if (n > 0)
-		_element = new T[n];
+	_size = n;
+	if (_size)
+		_element = new T[_size];
 	else	
 		_element = NULL;
 }
@@ -49,46 +59,44 @@ Array<T>::Array(unsigned int n)
 template <typename T>
 Array<T>::Array(const Array<T> &object)
 {
-	_element = 0;
+	//_element = NULL;
 	*this = object;	
 }
 
 template <typename T>
 Array<T>& Array<T>::operator=(const Array<T> &object)
 {
-	if (_element)
-		delete [] _element;
-	if (object.size())
+	if (this != &object)
 	{
-		_element = new T(object.size());
-		for (int i = 0; i < this->size(); i++)
-		{
+		if (_size > 0)
+			delete [] _element;
+		_size = object._size;
+		_element = new T[object._size];
+		for (unsigned int i = 0; i < _size; i++)
 			_element[i] = object._element[i];
-		}
 	}
-	else
-		_element = 0;
 	return (*this);
 }
 
 template <typename T>
 T& Array<T>::operator[](const int index)
 { 
-	if (index < 0 || index > this->size())
-		throw std::out_of_rangecd();
+	if (index < 0 || _size <= static_cast<unsigned int>(index))
+		throw MyException();
 	return(_element[index]);
 }
 
 template <typename T>
-int Array<T>::size() const
+unsigned int Array<T>::size() const
 {
-	int i = 0;
+	return (_size);
+}
+
+template <typename T>
+Array<T>::~Array()
+{
 	if (_element)
-	{
-		while (_element[i])
-			i++;
-	}
-	return (i);
+		delete [] _element;
 }
 
 #endif
